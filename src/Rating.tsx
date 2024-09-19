@@ -15,6 +15,11 @@ export const Rating: FC<{rating: number}> = ({rating}) => {
     }, []);
 
     return <div className='rating-container' data-testid='ratingContainer'>
+
+        <div className='blocking-content'>
+            Blocked!
+        </div>
+
       <div className="buttons">
           <button className="btn" onClick={decrementRating} data-testid='voteDown'>👎</button>
           <div className="stars">{currentRating === 0 ? <>No rating</> :  Array.from({length: currentRating}).map(() => <div className='star' data-testid='star'>⭐</div>)}</div>
