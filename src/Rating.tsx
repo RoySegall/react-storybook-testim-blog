@@ -14,12 +14,17 @@ export const Rating: FC<{rating: number}> = ({rating}) => {
       setCurrentRating((prevRating) => (prevRating > 0 ? prevRating - 1 : prevRating));
     }, []);
 
-    return <div className='rating-container'>
-      <div className="buttons">
-          <button className="btn" onClick={decrementRating}>👎</button>
-          <div className="stars">{currentRating === 0 ? <>No rating</> :  Array.from({length: currentRating}).map(() => <div className='star'>⭐</div>)}</div>
+    return <div className='rating-container' data-testid='ratingContainer'>
 
-          <button className="btn" onClick={incrementRating}>👍</button>
+        <div className='blocking-content'>
+            Blocked!
+        </div>
+
+      <div className="buttons">
+          <button className="btn" onClick={decrementRating} data-testid='voteDown'>👎</button>
+          <div className="stars">{currentRating === 0 ? <>No rating</> :  Array.from({length: currentRating}).map(() => <div className='star' data-testid='star'>⭐</div>)}</div>
+
+          <button className="btn" onClick={incrementRating} data-testid='voteUp'>👍</button>
         </div>
     </div>
 }
