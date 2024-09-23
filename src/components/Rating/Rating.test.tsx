@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {Rating} from './Rating';
+import {Rating} from './Rating.tsx';
 import {fireEvent, render, screen} from '@testing-library/react'
 
 describe('Rating', () => {
