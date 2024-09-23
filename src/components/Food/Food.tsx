@@ -1,4 +1,5 @@
 import {Rating} from "../Rating";
+import "./food.css";
 import type {FC} from "react";
 
 export interface FoodInterface {
