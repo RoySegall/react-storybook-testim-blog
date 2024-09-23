@@ -7,11 +7,13 @@
     position: relative;
 }
 
-.blocking-content {
-    position: absolute;
-    background: red;
-    width: 100%;
-}
+
+/** This will break the component. You can comment out to see the test are working or not */
+/*.blocking-content {*/
+/*    position: absolute;*/
+/*    background: red;*/
+/*    width: 100%;*/
+/*}*/
 
 .stars {
   display: flex;
